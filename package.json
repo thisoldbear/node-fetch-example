@@ -1,0 +1,17 @@
+{
+  "name": "node-fetch-example",
+  "version": "1.0.0",
+  "description": "Example starter using Express and node-fetch",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Williams",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "2.5.7",
+    "express": "4.16.2",
+    "node-fetch": "2.1.2"
+  }
+}

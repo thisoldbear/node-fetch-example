@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Express and Node Fetch</title>
+</head>
+<body class="container">
+  <main>
+    <p><button onclick="makeRequest()">🐕 Show me the Airedale 🐕</button></p>
+  </main>
+  <script>
+    const image = new Image;
+    document.querySelector('main').appendChild(image);
+
+    const getRandomInt = max => {
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    const makeRequest = () => {
+      fetch('/dog/airedale')
+        .then(response => {
+          return response.json();
+        })
+        .then(({message})=> {
+          image.src = message[getRandomInt(message.length)];
+        });
+      }
+  </script>
+</body>
+</html>
